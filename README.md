@@ -1,2 +1,2 @@
 Simple sorting algorithms made in Python.
-They are capable of handling arrays with integers.
+They are capable of handling lists with integers.
