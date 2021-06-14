@@ -1,10 +1,10 @@
-def selection_sort(array):
-    for i in range(len(array)):
+def selection_sort(input_list):
+    for i in range(len(input_list)):
         min_index = i
-        for k in range(i, len(array)):
-            if array[k] < array[min_index]:
+        for k in range(i, len(input_list)):
+            if input_list[k] < input_list[min_index]:
                 min_index = k
 
-        array[i], array[min_index] = array[min_index], array[i]
+        input_list[i], input_list[min_index] = input_list[min_index], input_list[i]
 
-    return array
+    return input_list

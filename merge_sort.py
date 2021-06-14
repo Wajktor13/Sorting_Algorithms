@@ -1,24 +1,24 @@
-def merge_sort(array):
-    if len(array) != 1:
-        left = merge_sort(array[0:(len(array) // 2)])
-        right = merge_sort(array[(len(array) // 2):])
+def merge_sort(input_list):
+    if len(input_list) != 1:
+        left = merge_sort(input_list[0:(len(input_list) // 2)])
+        right = merge_sort(input_list[(len(input_list) // 2):])
 
         return merge(left, right)
 
-    return array
+    return input_list
 
 
 def merge(left, right):
-    final_array = []
+    final_list = []
     l = r = 0
     while l < len(left) and r < len(right):
         if left[l] < right[r]:
-            final_array.append(left[l])
+            final_list.append(left[l])
             l += 1
         else:
-            final_array.append(right[r])
+            final_list.append(right[r])
             r += 1
 
-    final_array += left[l:] + right[r:]
+    final_list += left[l:] + right[r:]
 
-    return final_array
+    return final_list

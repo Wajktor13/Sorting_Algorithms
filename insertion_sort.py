@@ -1,16 +1,16 @@
-def insertion_sort(array):
-    final_array = [array[0]]
-    for i in range(1, len(array)):
+def insertion_sort(input_list):
+    final_list = [input_list[0]]
+    for i in range(1, len(input_list)):
         passed = False
-        for f in range(len(final_array)):
-            if array[i] < final_array[f]:
-                final_array, uns_array = final_array[0:f], final_array[f:]
-                final_array.append(array[i])
-                final_array += uns_array
+        for f in range(len(final_list)):
+            if input_list[i] < final_list[f]:
+                final_list, uns_array = final_list[0:f], final_list[f:]
+                final_list.append(input_list[i])
+                final_list += uns_array
                 passed = True
                 break
         if not passed:
-            final_array.append(array[i])
+            final_list.append(input_list[i])
 
-    return final_array
+    return final_list
 
